@@ -1,9 +1,9 @@
 <?php
     class Conexion{
-        private $root = 'root';
+        private $root = __root__;
         private $password = '';
-        private $host = 'localhost';
-        private $dbname = 'proyecto';
+        private $host = __host__;
+        private $dbname = ___dbname__;
 
         public function conectar(){
             try{
