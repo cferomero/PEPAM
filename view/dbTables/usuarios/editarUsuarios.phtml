@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $datos[0]['nombre'];?></title>
+</head>
+<body>
+    <section>
+        <?php
+            if(!count($datos) == 0){?>
+        <form action="<?php echo Conexion::ruta();?>c-ausuarios/" method="POST">
+            <h2>Editar la información del usuario</h2>
+            <hr>
+            <p>
+                <label>Número documeto:</label>
+                <input type="number" name="id" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" value="<?php echo $datos[0]["id_usuario"];?>" id="id" readonly="" />
+            </p>
+            <p>
+                <label>Nombre:</label>
+                <input type="text" name="nombre" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" value="<?php echo $datos[0]["nombre"];?>" id="nombre"/>
+            </p>
+            <p>
+                <label>Apellidos:</label>
+                <input type="text" name="apellidos" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" value="<?php echo $datos[0]["apellidos"];?>" id="apellidos"/>
+            </p>
+            <p>
+                <label>Correo electronico:</label>
+                <input type="email" name="email" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" value="<?php echo $datos[0]["email"];?>" id="email"/>
+            </p>
+            <p>
+                <label>Contraseña:</label>
+                <input type="text" name="clave" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" value="<?php echo $datos[0]["clave"];?>"  readonly=""/>
+            </p>
+            <p>
+                <label>Edad:</label>
+                <input type="number" name="edad" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" value="<?php echo $datos[0]["edad"];?>"/>
+            </p>
+            <p>
+                <label>Celular:</label>
+                <input type="number" name="celular" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" value="<?php echo $datos[0]["celular"];?>"/>
+            </p>
+            <p>
+                <label>Id caracterización:</label>
+                <input type="number" name="id_carac" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" value="<?php echo $datos[0]["c_idcarac"];?>"/>
+            </p>
+            <p>
+                <label>Estado:</label>
+                <input type="text" name="estado" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" value="<?php echo $datos[0]["estado"];?>"/>
+            </p>
+            <input type="hidden" name="editar">
+            <div class="submit">
+                <input type="submit" value="Guardar cambios" id="botonEditar" />
+            </div>
+            <a href="<?php echo Conexion::ruta();?>c-usuarios/"><input type="button" value="Regresar"></a>
+        </form>
+        <?php
+            }else{
+                require_once "controller/errorController.php";
+            }
+        ?>
+    </section>
+</body>
+</html>

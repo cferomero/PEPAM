@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="<?php echo Conexion::ruta(); ?>/css/dashboard.css">
+  <link rel="stylesheet" href="<?php echo Conexion::ruta(); ?>/css/table.css">
+
+</head>
+
+<body>
+  <!-- preloading -->
+
+  <!-- partial:index.partial.html -->
+  <header id="main-header">
+      <nav id="sidenav">
+        <div id="sidenav-header">
+          <div id="profile-picture">
+            <img src="http://www.gravatar.com/avatar/fa4df8540bab3cb38f7dfa60c6e0522c.png" />
+          </div>
+          <a href="#" id="profile-link">Jesse Couch</a>
+        </div>
+        <div id="account-actions">
+          <a href="#" data-title="Settings"><i class="fa fa-cog"></i></a>
+        </div>
+        <ul id="main-nav">
+          <li>
+            <a href="<?php echo Conexion::ruta(); ?>c-dashboard/">
+              <i class="fa fa-tachometer"></i>
+              Dashboard
+            </a>
+          </li>
+          <li class="active">
+            <a href="<?php echo Conexion::ruta(); ?>c-roles/">
+              <i class="fa fa-check-square-o"></i>
+              Tabla Rol
+            </a>
+          </li>
+          <li class="active">
+            <a href="<?php echo Conexion::ruta(); ?>c-usuarios/">
+              <i class="fa fa-check-square-o"></i>
+              Tabla Usuario
+            </a>
+          </li>
+          <li class="active">
+            <a href="<?php echo Conexion::ruta(); ?>c-rolesusuarios/">
+              <i class="fa fa-check-square-o"></i>
+              Tabla Rol Usuario
+            </a>
+          </li>
+          <li class="active">
+            <a href="<?php echo Conexion::ruta(); ?>c-caracterizacion/">
+              <i class="fa fa-check-square-o"></i>
+              Tabla Caracterización
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <form id="admin-search">
+        <input type="text" id="search-field" placeholder="Search" />
+        <label for="search-field" id="search-label" title="Search"><i class="fa fa-search"></i></label>
+      </form>
+      <div id="header_logo">
+        <a href="#">Logo</a>
+      </div>
+    </header>
+</body>
+
+</html>

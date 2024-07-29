@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nuevo usuario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css"/>
+    <link rel="stylesheet" href="<?php echo Conexion::ruta();?>/css/usuarios.css" />
+    <link rel="stylesheet" href="<?php echo Conexion::ruta();?>/css/crear_usu.css" />
+
+    <body>
+      <p class="texto">Crear nuevo usuario</p>
+      <div class="Registro">
+      <form method="POST" action="<?php echo Conexion::ruta();?>c-cusuario/">
+
+        <input type="number" name="id" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" id="id" placeholder="Documento identidad" autocomplete="off" required/>
+        <input type="text" name="nombre" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" id="nombre" placeholder="Nombres" autocomplete="off" required/> 
+        <input type="text" name="apellidos" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" id="apellidos" placeholder="Apellidos" autocomplete="off" required/>
+        <input type="hidden" name="crear">
+        <input type="email" name="email" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" id="email" placeholder="Correo electrónico" autocomplete="off" required/>
+        <input type="password" name="clave" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" id="password" placeholder="Contraseña" autocomplete="off" required/>
+        <input type="submit" value="Crear usuario" title="Crear Usuario">
+        <br>
+        <a href="<?php echo Conexion::ruta();?>c-usuarios/"><input type="button" value="Regresar"></a>
+        </a>
+      </form>
+      <!-- partial -->
+
+    </body>
+  </head>
+</html>

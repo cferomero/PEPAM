@@ -1,0 +1,327 @@
+<?php
+$mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
+if (!empty($mensaje)) {
+    echo "<script>alert('$mensaje')</script>";
+}
+?>
+<!DOCTYPE html>
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="college, campus, university, courses, school, educational">
+    <meta name="description" content="ATENA - College, University and campus template">
+    <meta name="author" content="Ansonika">
+    <title>P3PAM - Inicio</title>
+    <!-- <link rel="shortcut icon" href="img/logo/Logo-Simplificado-Fondo-oscuro-P3PAM.png" type="image/x-icon"> -->
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/logo/Logo - Simplificado - Fondo oscuro P3PAM.png" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- BASE CSS -->
+    <link href="<?php echo Conexion::ruta();?>css/base.css" rel="stylesheet">
+    
+    <!-- SPECIFIC CSS -->
+    <link href="<?php echo Conexion::ruta();?>css/tabs.css" rel="stylesheet">
+    
+    <!-- Modernizr -->
+	<script src="<?php echo Conexion::ruta();?>js/modernizr.js"></script> 
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<!--[if lte IE 8]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
+<![endif]-->
+
+<div id="preloader">
+	<div class="pulse"></div>
+</div><!-- Pulse Preloader -->
+    <!-- Header================================================== -->
+    <header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div id="logo">
+                    <a href="<?php echo Conexion::ruta();?> c-home/">
+                        <img src="<?php echo Conexion::ruta();?>img/logo/Logo - Horizontal Fondo Oscuro P3PAM.png" width="110" height="70" alt="Atena" data-retina="true">
+                    </a>
+                </div>
+            </div>
+            <nav class="col-md-9 col-sm-9 col-xs-9">
+            <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
+            <div class="main-menu">
+                <div id="header_menu">
+                    <img src="img/logo_mobile.png" width="125" height="40" alt="Atena" data-retina="true">
+                </div>
+                <a href="#" class="open_close" id="close_in"><i class="icon_close"></i></a>
+                <ul>
+                    <li><a href="<?php echo Conexion::ruta();?> c-home/">Home</a></li>
+                    <li class="submenu">
+                    <a href="javascript:void(0);" class="show-submenu">Nosotros <i class="icon-down-open-mini"></i></a>
+                    <ul>
+                        <li><a href="<?php echo Conexion::ruta();?>c-about/">Acerca de nosotros</a></li>
+                        <li><a href="<?php echo Conexion::ruta();?>c-gallery/">Galería</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#" data-toggle="modal" data-target="#login">Iniciar sesión</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#register">Registrase</a></li>
+                    <li><a href="#search" id="search_bt"><i class=" icon-search"></i><span>Buscar</span></a></li>
+                </ul>
+            </div><!-- End main-menu -->
+            </nav>
+        </div>
+    </div><!-- container -->
+    </header><!-- End Header -->
+
+  <section class="header-video">
+  <div id="hero_video">
+	<div id="intro_txt" >
+   	  	<h1 class="animated fadeInDown">Prótesis de <strong>Alta</strong> calidad</h1>
+        <!-- <p class="animated fadeInDown">Daté una oportunidad</p> -->
+        <a class="animated fadeInUp button_intro" data-toggle="modal" data-target="#login">Iniciar sesión</a> 
+        <a class="video_pop animated fadeInUp button_intro outline">Play video</a>
+   </div>    
+ </div>
+    <img src="<?php echo Conexion::ruta();?>img/slides/protesis.mp4" alt="" class="header-video--media" data-video-src="video/intro"  data-teaser-source="video/intro" data-provider="Vimeo" data-video-width="1920" data-video-height="960">
+</section><!-- End Header video -->
+    
+    
+    <div class="container margin_60">
+    <div class="main_title">
+    <h2>Características</h2>
+    <p>Características de prototipos y prótesis.</p>
+    </div>
+    	<div class="row">
+        	<div class="col-md-6 col-sm-6">
+            	<div class="box_feat_home">
+                	<i><ion-icon name="trending-up"></ion-icon></i>
+                	<h3>Alta calidad</h3>
+                    <p>Prótesis mandadas a fabricar utilizando los mejores materiales y con la más alta calidad, diseñadas específicamente para satisfacer las necesidades individuales de cada usuario.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+            	<div class="box_feat_home">
+                	<i><ion-icon name="resize-outline"></ion-icon></i>
+                	<h3>Prototipos a medida</h3>
+                    <p>Creamos prototipos personalizados utilizando diseños previamente establecidos para garantizar la máxima comodidad y satisfacción del destinatario.</p>
+                </div>
+            </div>
+        </div><!-- End row -->
+        <div class="row">
+        	<div class="col-md-6 col-sm-6">
+            	<div class="box_feat_home">
+                	<i><ion-icon name="card"></ion-icon></i>
+                	<h3>Bajos recursos</h3>
+                    <p>Ofrecemos prótesis de alta calidad a precios asequibles para todas aquellas personas con discapacidad en las extremidades inferiores que no tienen los recursos económicos suficientes para obtener una prótesis de calidad.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+            	<div class="box_feat_home">
+                	<i><ion-icon name="search"></ion-icon></i>
+                	<h3>Caracterización y costo</h3>
+                    <p>Proporcionamos prótesis de forma gratuita a aquellas personas que han sido identificadas previamente como elegibles.</p>
+                </div>
+            </div>
+        </div><!-- End row -->
+        <hr class="more_margin">
+    </div><!-- End container -->
+    
+ <div class="bg_content testimonials">
+              <div class="row">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                        <!-- Bottom Carousel Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#quote-carousel" data-slide-to="1"></li>
+                            <li data-target="#quote-carousel" data-slide-to="2"></li>
+                        </ol><!-- Carousel Slides / Quotes -->
+                        <div class="carousel-inner">
+                            <!-- Quote 1 -->
+                            <div class="item active">
+                                <blockquote>
+                                    <p>
+                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.
+                                    </p>
+                                </blockquote>
+                               <small><img class="img-circle" src="img/testimonial_1.jpg" alt="">Stefany</small>
+                            </div>
+                            <!-- Quote 2 -->
+                            <div class="item">
+                                <blockquote>
+                                    <p>
+                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.
+                                    </p>
+                                </blockquote>
+                                 <small><img class="img-circle" src="img/testimonial_2.jpg" alt="">Karla</small>
+                            </div>
+                            <!-- Quote 3 -->
+                            <div class="item">
+                                <blockquote>
+                                    <p>
+                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.
+                                    </p>
+                                </blockquote>
+                                <small><img class="img-circle" src="img/testimonial_1.jpg" alt="">Maira</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End row -->
+        </div><!-- End bg_content -->
+
+        
+        <div class="container_gray_bg" id="newsletter_container">
+        <div class="container margin_60">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h3>Subscribete para más novedades.</h3>
+                    <div id="message-newsletter"></div>
+                    <form method="post" action="assets/newsletter.php" name="newsletter" id="newsletter" class="form-inline">
+                        <input name="email_newsletter" id="email_newsletter" type="email" value="" placeholder="Correo electrónico" class="form-control">
+                        <button id="submit-newsletter" class="button"> Subscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div><!-- End newsletter_container -->
+
+        <footer>
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-3 col-sm-3">
+                    <p id="logo_footer">
+                        <img src="<?php echo Conexion::ruta();?>img/logo/Logo - Simplificado - Fondo oscuro P3PAM.png" width="70" height="70" alt="Atena" data-retina="true">
+                        <img src="<?php echo Conexion::ruta();?>img/logo/Logo - Horizontal Fondo Oscuro P3PAM.png" width="70" height="70" alt="Atena" data-retina="true">
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <h4>Nosotros</h4>
+                    <ul>
+                        <li><a >Acerca de nosotros</a></li>
+                        <li><a data-toggle="modal" data-target="#login">Iniciar sesión</a></li>
+                        <li><a data-toggle="modal" data-target="#register">Registrarse</a></li>
+                        <li><a >Términos & condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <h4>Contáctanos</h4>
+                    <ul>
+                        <li><a>Contacto</a></li>
+                    </ul>
+                    <ul id="contacts_footer">
+                        <li>Línea de información - <a href="tel://+573215478520">+573215478520</a></li>
+                        <li>Correo electrónico - <a href="#">info@p3pam.com</a></li>
+                    </ul>
+                </div>
+            </div><!-- End row -->
+        </div><!-- End container -->
+        </footer><!-- End footer -->
+        <div id="copy">
+            <div class="container">
+                 © P3PAM 2023 - Todos los derechos reservados.
+            </div>
+        </div><!-- End copy -->
+
+	
+<!-- Login modal -->   
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myLogin" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+				<form action="<?php echo Conexion::ruta();?>c-seleccionar/" method="POST" class="popup-form" id="myLogin">
+					<input type="email" class="form-control form-white" name="email" placeholder="Correo electrónico" required>
+					<input type="password" class="form-control form-white" name="password" placeholder="Contraseña" required>
+                    <div class="crear">
+                        <label for="#"data-toggle="modal" data-target="#register" style="color: gray">¿No tienes una cuenta? Registrate.</label>
+                    </div>
+					<input type="hidden" name="login">
+					<input type="submit" class="btn btn-submit" value="Iniciar sesión" />
+				</form>
+			</div>
+		</div>
+	</div>  
+
+    
+<!-- Register modal -->   
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myRegister" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+				<form action="<?php echo Conexion::ruta();?>c-insertar/" method="POST" class="popup-form" id="myRegister">
+                    <input type="number" class="form-control form-white" name="id" placeholder="Documento" required>
+					<input type="text" class="form-control form-white" name="nombre" placeholder="Nombres" required>
+					<input type="text" class="form-control form-white" name="apellido" placeholder="Apellidos" required>
+                    <input type="email" class="form-control form-white" name="email" placeholder="Correo electrónico" required>
+                    <input type="password" class="form-control form-white" name="password" placeholder="Contraseña" required>
+					<div class="checkbox-holder text-left">
+						<div class="checkbox">
+							<input type="checkbox" value="accept_2" id="check_2" name="check_2" required />
+							<label for="check_2"><span>Acepto <strong>Términos &amp; Condiciones</strong></span></label>
+						</div>
+					</div>
+                    <input type="hidden" name="p3pam">
+					<input type="submit" class="btn btn-submit" value="Registrarse" />
+
+                    <?php
+                        $cad = "<script language= 'JavaScript'>". "x='" .$mensaje. "'; alert(x); </script>";
+                        # imprimir mensaje
+                        if($mensaje <> null) echo $cad;
+                    ?>
+				</form>
+			</div>
+		</div>
+	</div>
+    
+<!-- Search modal -->   
+<div id="search">
+    <button type="button" class="close">×</button>
+    <form>
+        <input type="search" value="" placeholder="type keyword(s) here" >
+        <button type="submit" class="button">Search</button>
+    </form>
+</div>
+    
+<!-- Common scripts -->
+<script src="<?php echo Conexion::ruta();?>js/jquery-1.11.2.min.js"></script>
+<script src="<?php echo Conexion::ruta();?>js/common_scripts_min.js"></script>
+<script src="<?php echo Conexion::ruta();?>js/functions.js"></script>
+
+<!-- Newsletter validate -->
+<script src="<?php echo Conexion::ruta();?>assets/validate.js"></script>
+<script src="<?php echo Conexion::ruta();?>js/tabs.js"></script>
+		<script>
+			new CBPFWTabs( document.getElementById( 'tabs' ) );
+		</script>
+        
+  <script src="<?php echo Conexion::ruta();?>js/video_header.js"></script>
+<script>
+$(document).ready(function() {
+	'use strict';
+   HeaderVideo.init({
+      container: $('.header-video'),
+      header: $('.header-video--media'),
+      videoTrigger: $("#video-trigger"),
+      autoPlayVideo: false
+    });    
+
+});
+</script>
+</body>
+</html>

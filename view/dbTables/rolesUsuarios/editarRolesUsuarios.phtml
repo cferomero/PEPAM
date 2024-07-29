@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar rol de usuario</title>
+</head>
+<body>
+    <section>
+        <?php 
+            if(!count($roles) == 0){
+        ?>
+        <form action="<?php echo Conexion::ruta();?>c-arolesusuarios/" method="POST">
+            <h2>Editar información del rol de usuario</h2>
+            <hr>
+            <p>
+                <label>Documento identidad:</label>
+                <input type="number" name="id_usuario" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" value="<?php echo $roles[0]["id_usuario"];?>" class="id" readonly="" />
+            </p>
+            <input type="hidden" name="editar">
+            <p>
+                <label>Id rol:</label>
+                <input type="number" name="id_rol" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" value="<?php echo $roles[0]["id_rol"];?>" class="id" />
+            </p>
+            <div class="submit">
+                <input type="submit" value="Guardar cambios" id="botonEditar" />
+            </div>
+            <a href="<?php echo Conexion::ruta();?>c-rolesusuarios/"><input type="button" value="Regresar"></a>
+        </form>
+        <?php 
+            }else{
+                require_once "controller/errorController.php";
+            }
+        ?>
+    </section>
+</body>
+</html>

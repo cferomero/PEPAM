@@ -1,0 +1,74 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Roles del usuario</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="<?php echo Conexion::ruta(); ?>/css/dashboard.css">
+  <link rel="stylesheet" href="<?php echo Conexion::ruta(); ?>/css/table.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+
+  <body>
+    <div id="menu-overlay"></div>
+    <div id="menu-toggle" class="closed" data-title="Menu">
+      <i class="fa fa-bars"></i>
+      <i class="fa fa-times"></i>
+    </div>
+
+    <!-- MENU LATERAL -->
+    <?php
+      include "./view/menusidebar.phtml";
+    ?>
+    <!-- MENU LATERAL -->
+
+    <section id="content">
+      <div class="table">
+        <div class="table-header">
+          <div class="left-content">
+            <h2>Roles de usuario</h2>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Documento identidad</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Id Rol</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <?php
+            for ($i = 0; $i < sizeof($roles); $i++) {
+            ?>
+
+              <tbody>
+                <tr>
+                  <td><?php echo $roles[$i]['id_usuario']; ?></td>
+                  <td><?php echo $roles[$i]['nombre']; ?></td>
+                  <td><?php echo $roles[$i]['apellidos']; ?></td>
+                  <td><?php echo $roles[$i]['id_rol']; ?></td>
+                  <td>
+                    <a href="">
+                      <img src="../img/dashboard/edit.png" width="32" height="32">
+                    </a>
+                  </td>
+                </tr>
+              <?php } ?>
+              </tbody>
+          </table>
+        </div>
+        <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="../js/Dashboard.js"></script>
+
+  </body>
+
+</html>
